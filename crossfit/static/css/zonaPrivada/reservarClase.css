@@ -1,0 +1,104 @@
+.contenidoPrivada{
+  margin-left: 2%;
+  margin-bottom: 17%;
+}
+.info{
+  margin-top: 25%;
+  border: 1px solid #A0A0A0;
+}
+.info td{
+  text-align: justify;
+  width:50%;
+  padding-top: 4.5%;
+  padding-bottom:4.5%;
+  background-color: #d2d2d2;
+  padding-left: 8%;
+}
+.info a{
+  font-weight: bold;
+  color:black;
+}
+h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2866B9;
+}
+
+.fotoUser img{
+  border-radius: 50%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin-left: 20%;
+}
+
+.actividadesDia{
+  margin-top: 4%;
+  margin-bottom: 10%;
+}
+.actividad{
+  margin-top: 2.5%;
+  margin-left: 20%;
+  border-radius: 10px;
+  background-color: rgb(235,235, 235);
+  width: 60%;
+}
+.actividad h3{
+  text-align: center;
+  background-color: #a9203f;
+  margin: 0%;
+  padding: 1%;
+  color:white;
+  border-radius: 5px;
+}
+.infoActividad{
+  padding-top: 2%;
+  background-color: rgb(235,235, 235);
+}
+.actividad p{
+  font-size: 16px;
+  color: black;
+  padding: 2% 3%;
+  text-align: justify;
+}
+.infoActividad table{
+  width: 100%;
+}
+.infoActividad table p{
+  text-align: center;
+  font-size: 18px;
+  margin:0;
+  padding: 1%;
+}
+.actividad:hover{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  border: 1px solid #a9203f;
+}
+.diaActual{
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 18px;
+  font-weight: 800;
+}
+.step-links a{
+  font-weight: bolder;
+}
+.seleccionada a{
+  cursor:pointer;
+}
+
+.success{
+  background-color: green;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  width: 80%;
+  margin-left: 10%;
+  padding: 1%;
+}

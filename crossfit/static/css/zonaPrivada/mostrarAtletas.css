@@ -1,0 +1,85 @@
+.contenidoPrivada{
+  margin-left: 2%;
+  margin-bottom: 17%;
+}
+.info{
+  margin-top: 25%;
+  border: 1px solid #A0A0A0;
+}
+.info td{
+  text-align: justify;
+  width:50%;
+  padding-top: 4.5%;
+  padding-bottom:4.5%;
+  background-color: #d2d2d2;
+  padding-left: 8%;
+}
+.info a{
+  font-weight: bold;
+  color:black;
+}
+h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2866B9;
+}
+
+.fotoUser img{
+  border-radius: 50%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin-left: 20%;
+}
+
+/* Información de los atletas */
+.infAtletas{
+   margin-top: 2%;
+}
+.atleta{
+  background-color: #C0C0C0;
+  margin-right: 4%;
+  margin-left: 1%;
+  margin-bottom: 8%;
+  border-radius: 10px;
+}
+.atleta:hover{
+  transform: scale(1.15);
+  cursor: pointer;
+  background-color: #a9203f;
+}
+.atleta p{
+  font-size: 18px;
+}
+.atleta a{
+  font-weight: bold;
+  color:black;
+}
+
+.infoAtletaA{
+  padding-top: 6%;
+  padding-bottom: 6%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-right: 1%;
+}
+.infoAtletaA .nombre{
+  width: 65%;
+}
+.atleta img{
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+}
+.atleta{
+  margin-left: 12%;
+}
+

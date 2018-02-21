@@ -1,0 +1,51 @@
+.index{
+	background-image: url('../fotos/index.jpg');
+	width: 100%;
+	color: white;
+	height: 420px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 60%;
+}
+.estadisticas{
+	margin-top: 20%;
+}
+.estadisticas h4 {
+	margin:0;
+	font-size: 20px;
+}
+.usuariosR{
+	margin:0;
+	margin-left: 8%;
+}
+.reservasCross{
+	margin:0;
+	margin-right: 10%;
+	float:right;
+	text-align: right;
+}
+.informacionCrossfit{
+	margin-top: 2%;
+	background-color: rgb(235,235, 235);
+	width: 50%;
+}
+.crossfit , .comunidad , .dirigido, .otraInfoCross{
+	padding-top: 2%;
+	background-color: rgb(235,235, 235);
+}
+.crossfit , .comunidad , .dirigido , .otraInfoCross h3{
+	text-align: center;
+}
+.index h3{
+	background-color: #a9203f;
+	margin: 0%;
+	padding: 1%;
+	border-radius: 5px;
+}
+.index p{
+	font-size: 18px;
+	color: black;
+	text-align: justify;
+	padding: 2% 3%;
+}
+

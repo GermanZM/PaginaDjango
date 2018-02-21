@@ -1,0 +1,26 @@
+.modal-header{
+	text-align: center;
+	border: 0;
+	background-color: #a9203f;
+	color: white;
+	padding-left: 5%;
+}
+.close{
+	padding: 1px 4px;
+}
+.cabeceraA{
+	display: flex;
+  	align-items: center;
+}
+.logo{
+	width: 10%;
+}
+.entrenoOficial{
+	padding-left: 6%;
+	display: flex;
+  	align-items: center;
+  	margin-right: 1%;
+}
+.entrenoOficial p{
+	font-size: 18px;
+}

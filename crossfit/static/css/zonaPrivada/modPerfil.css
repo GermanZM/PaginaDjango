@@ -1,0 +1,120 @@
+.contenidoPrivada{
+  margin-left: 2%;
+  margin-bottom: 17%;
+}
+.info{
+  margin-top: 25%;
+  border: 1px solid #A0A0A0;
+}
+.info td{
+  text-align: justify;
+  width:50%;
+  padding-top: 4.5%;
+  padding-bottom:4.5%;
+  background-color: #d2d2d2;
+  padding-left: 8%;
+}
+.info a{
+  font-weight: bold;
+  color:black;
+}
+h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2866B9;
+}
+
+.fotoUser img{
+  border-radius: 50%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin-left: 20%;
+}
+.modPerfil{
+  margin-top: 2%;
+  margin-left: 6.5%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  background-color: rgb(235,235, 235);
+  width: 40%;
+  word-wrap: break-word
+}
+.btn-default{
+  background-color: #a9203f;
+  display: inline-block;
+  font: 400 14px/14px "Verdana";
+  color: #ffffff;
+  padding: 11px 19px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  -moz-border-radius:10px;
+  -webkit-border-radius:5px;
+  -o-border-radius:5px;
+}
+.btn-default:hover{
+    text-decoration: none;
+    background-color: #b8102f;
+    color:white;
+}
+.btnGuardar{
+    text-align: center;
+}
+.infoActual{
+  margin-top: 2%;
+  margin-left: 6.5%;
+  border-radius: 10px;
+  background-color: rgb(235,235, 235);
+  width: 40%;
+  word-wrap: break-word;
+  margin-bottom: 10%;
+}
+.informacionE{
+  padding-top: 2%;
+  background-color: rgb(235,235, 235);
+}
+.infoActual h3{
+  text-align: center;
+  background-color: #a9203f;
+  margin: 0%;
+  padding: 1%;
+  color:white;
+  border-radius: 5px;
+}
+.infoActual p{
+  font-size: 16px;
+  color: black;
+  margin:0;
+  padding: 2% 3%;
+  text-align: justify;
+}
+.informacion{
+  margin-top: 8%;
+  display:none;
+}
+.modificacion{
+  margin-top: 3%;
+}
+.modificacion h3{
+  text-align: center;
+}
+.btnMod{
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.success{
+  background-color: green;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  width: 80%;
+  margin-left: 10%;
+  padding: 1%;
+}

@@ -1,0 +1,40 @@
+/* Menú */
+ul {
+    list-style-type: none;
+    margin: 0% 25%;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+}
+.bienvenido{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    float:right;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+li a:hover {
+	color:white;
+	text-decoration: none;
+    background-color: #2866B9;
+}
+
+.active {
+    background-color: #1F4F8F;
+}
+.zonaPrivada{
+	float:right;
+}

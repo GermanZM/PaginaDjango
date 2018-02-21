@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+	<meta charset="UTF-8">
+	<title>Legends VS Tigers</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<link rel="shortcut icon" href="{% static 'fotos/logo.ico' %}" />
+	{% block cabecera %}
+	{% endblock %}
+</head>
+<body>
+<div class="container-fluid global">
+	<header>
+		<table class="logoCabecera">
+			<tr>
+				<td>
+					<img src="{% static 'fotos/logo.png' %}">
+				</td>
+				<td>
+					<h1>Legends VS Tigers</h1>
+				</td>
+			</tr>
+		</table>
+	<header>
+	<nav>
+		<div class="container linea">
+			{% block intro %}<h1 class="cabecera"> Bienvenido a la web oficial de Legends vs Tigers</h1>{% endblock %}
+		</div>
+	</nav>
+	<section>
+	{% block contenido %}
+
+	{% endblock %}
+	</section>
+<footer class="footer-distributed">
+	<div class="footer-left">
+		<img src="" alt="" class="imagen"></td>
+		<p class="footer-links">
+			<a href="/crossfit/index">Inicio</a>
+			·
+			<a href="/crossfit/horario">Horario</a>
+			·
+			<a href="/crossfit/tarifa">Tarifas</a>
+			·
+			<a href="/crossfit/privada">Zona Privada</a>
+		</p>
+		<p class="footer-company-name">Crossfit Legends Vs Tigers afiliado &copy; 2018</p>
+	</div>
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>Calle Francia, 40 11519 El Trocadero</span> Puerto Real, España</p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+34 - 956 87 99 05</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:legends.tigers@gmail.com">legends.tigers@gmail.com</a></p>
+		</div>
+	</div>
+	<div class="footer-right">
+		<p class="footer-company-about">
+			<span>Sobre Nosotros</span>
+			Si te gusta el crossfit y te gusta sentirte como en casa, no dudes en acudir
+			a Crossfit Legends VS Tigers un box donde podrás disfrutar al máximo como una 
+			familia y practicar el deporte que te apasiona.
+		</p>
+		<div class="footer-icons">
+			<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/django/"><i class="fa fa-github"></i></a>
+		</div>
+	</div>
+</footer>
+</div>
+</body>
+</html>

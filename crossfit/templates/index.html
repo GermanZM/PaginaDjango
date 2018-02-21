@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block cabecera %}
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/comun/menu.css' %}">
+	<script src="{% static 'js/Index.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block intro %}
+	<ul>
+	  <li><a class="active" href="">Inicio</a></li>
+	  <li><a href="/crossfit/horario/">Horario</a></li>
+	  <li><a href="/crossfit/tarifa/">Tarifas</a></li>
+	  {% if user.is_authenticated  %}
+	  	<li><a href="{% url 'logout' %}">Logout</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/privada">Zona Privada</a></li>
+	  	<li class="bienvenido">Bienvenido: {{ user.username }}</li>
+	  {% else %}
+  	  	<li><a href="/crossfit/registro/">Registrarse</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/login">Zona Privada</a></li>
+	  {% endif %}
+	</ul>
+{% endblock %}
+
+{% block contenido %}
+	<div class="container index">
+		<div class="container-fluid estadisticas">
+			<div class="row">
+				<div class="col-md-3 usuariosR" >
+					<h4 id="usuariosR">Usuarios registrados: {{  usuarios|length }}</h4>
+				</div>
+				<div class="col-md-3 reservasCross">
+					<h4 id="reservasCross">Reservas de Crossfit: {{  nClases }} </h4>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid informacionCrossfit">
+			<div class="crossfit">
+				<h3>¿Qué es Crossfit?</h3>
+				<p>CrossFit se define como un sistema de entrenamiento de fuerza y acondicionamiento basado en ejercicios funcionales constantemente variados realizados a una alta intensidad.
+				<br><b>CrossFit es la herramienta perfecta para sacar el máximo partido a tu rendimiento deportivo.</b></p>
+			</div>
+			<div class="dirigido">
+				<h3>¿A quién va dirigido este tipo de entrenamiento?</h3>
+				<p>Gracias a su tremenda efectividad como sistema de preparación física, en sus orígenes el CrossFit fue elegido por numerosas academias militares, cuerpos de policía, artistas marciales y cientos de deportistas de élite en todo el mundo como programa de acondicionamiento y entrenamiento de fuerza estándar.
+				Actualmente el Crossfit se ha popularizado por todo el mundo, y se considere un entrenamiento intenso y sacrificado no quiere decir
+				que no esté disponible para todo el mundo, lo bueno que tiene Crossfit y las comunidades de dicho deporte es que son capaces de 
+				adaptar los entremos y los ejercicios a las necesidades y capacidad física de cada uno.</p>
+			</div>
+			<div class="comunidad">
+				<h3>Nuestra comunidad</h3>
+				<p>Podemos afirmar que la comunidad supone una gran parte fundamental del Crossfit, por eso en Legends VS Tigers nos tomamos
+				muy enserio a nuestros atletas e intentamos que se sientan lo mejor posible, como si fuese su segunda casa. Nosotros pensamos
+				que es uno de los factores fundamentales ya que lo que queremos es que nuestros atletas estén contentos, además practiquen
+				su deporte favorito y se entreguen al máximo.
+				Aparte la comunidad ofrece que todos los atletas se conozcan entre ellos y se manifiesta cada vez que un atleta anima, apoya
+				da aliento y ala vez exige lo máximo a otro compañero de entrenamiento, siempre sin sobrepasar los límites, pero un apoyo máximo
+				a su compañero. Muchas veces ese apoyo hace que sigamos y terminemos todos los entrenemos independientemente de lo duro que sean. </p>
+			</div>
+			<div class="otraInfoCross">
+				<h3>Otras ventajas del Crossfit</h3>
+				<p>Como hemos mencionado, CrossFit trabaja todas las capacidades físicas, por lo que no es extrañar que su práctica mejore notablemente cualquier otra modalidad deportiva. Además durante una sesión de CrossFit tendrás entrenadores especializados enseñándote y corrigiendo tu técnica en todo momento, además de exigirte para que consigas superarte a ti mismo en cada entrenamiento.
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

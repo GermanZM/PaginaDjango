@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+{% block cabecera %}
+	<link rel="stylesheet" href="{% static 'css/comun/menu.css' %}">
+	<link rel="stylesheet" href="{% static 'css/privadaLogin.css' %}">
+{% endblock %}
+
+{% block intro %}
+	<ul>
+	  <li><a href="/crossfit/index">Inicio</a></li>
+	  <li><a href="/crossfit/horario">Horario</a></li>
+	  <li><a href="/crossfit/tarifa">Tarifas</a></li>
+	  {% if user.is_authenticated  %}
+	  	<li><a href="{% url 'logout' %}">Logout</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/privada">Zona Privada</a></li>
+	  	<li class="bienvenido">Bienvenido: {{ user.username }}</li>
+	  {% else %}
+  	  	<li><a href="/crossfit/registro/">Registrarse</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/login">Zona Privada</a></li>
+	  {% endif %}
+	</ul>
+{% endblock %}
+
+{% block contenido %}
+	<div id="notificacion">
+		{% if messages %}
+			{% for message in messages %}
+				<p{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
+			{% endfor %}
+		{% endif %}
+	</div>
+	<div class="container login">
+		<div class="formLogin">
+			<h2>Iniciar Sesión</h2>
+			<form action="{% url 'login' %}" method="POST">
+				{{ form|crispy }}
+				<div class="btnLogin">
+					<input type="submit" value="Login" class="btn btn-default">
+				</div>
+				{% csrf_token %}
+			</form>
+		</div>
+	</div>
+{% endblock %}

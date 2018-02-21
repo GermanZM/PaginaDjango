@@ -1,0 +1,38 @@
+.modal-header{
+	text-align: center;
+	border: 0;
+	background-color: #a9203f;
+	color: white;
+	padding-left: 5%;
+}
+.close{
+	padding: 1px 4px;
+}
+.cabeceraA{
+	display: flex;
+  	align-items: center;
+}
+.inf{
+	float:right;
+	margin-right: 25%;
+	font-weight: bold;
+	font-size: 20px;
+}
+.logo{
+	width:7%;
+}
+.informacionAtleta{
+	padding-left: 6%;
+	display: flex;
+  	align-items: center;
+  	margin-right: 1%;
+}
+.informacionAtleta p{
+	font-size: 18px;
+}
+.informacionAtleta img{
+	min-width: 80px;
+	max-width: 80px;
+	min-height: 80px;
+	max-height: 80px;
+}

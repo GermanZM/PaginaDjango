@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block cabecera %}
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/comun/menu.css' %}">
+	<link rel="stylesheet" href="{% static 'css/horario.css' %}">
+{% endblock %}
+
+{% block intro %}
+	<ul>
+	  <li><a href="/crossfit/index">Inicio</a></li>
+	  <li><a class="active" href="/crossfit/horario/">Horario</a></li>
+	  <li><a href="/crossfit/tarifa/">Tarifas</a></li>
+	  {% if user.is_authenticated  %}
+	  	<li><a href="{% url 'logout' %}">Logout</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/privada">Zona Privada</a></li>
+	  	<li class="bienvenido">Bienvenido: {{ user.username }}</li>
+	  {% else %}
+  	  	<li><a href="/crossfit/registro/">Registrarse</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/login">Zona Privada</a></li>
+	  {% endif %}
+	</ul>
+{% endblock %}
+
+{% block contenido %}
+	<div class="container-fluid horario">
+		{% if horario %}
+		<div class="container">
+			<table class='table-striped modTabla'>
+				<tr class="cabeceraT">
+					<th style="border-top-left-radius: 10px">Hora</th>
+					<th>Lunes</th>
+					<th>Martes</th>
+					<th>Miércoles</th>
+					<th>Jueves</th>
+					<th>Viernes</th>
+					<th>Sábado</th>
+					<th style="border-top-right-radius: 10px">Domingo</th>
+				</tr>
+				{% for h in horas %}	
+					<tr>
+						<th>{{ h }}</th>
+					{% for clase in horario %}
+						<td>	
+						{% for c in clase %}
+							{% if c.horaInicio == h %}
+								<p>{{ c.actividad.tipo }} </p>
+							{% endif %}
+						{% endfor %}
+						</td>
+					{% endfor %}
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+		{% else %}
+			<div class="informativoHorario">
+				<p>Actualmente no se encuentra ningún horario definido, podéis pasaros por el Box si necesitáis más información.</p>
+				<p>Un cordial saludo</p>
+				<span class="footerInfor"><p>Legends vs Tigers</p></span>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+.contenidoPrivada{
+  margin-left: 2%;
+  margin-bottom: 18%;
+}
+.info{
+  margin-top: 25%;
+  border: 1px solid #A0A0A0;
+}
+.info td{
+  text-align: justify;
+  width:50%;
+  padding-top: 4.5%;
+  padding-bottom:4.5%;
+  background-color: #d2d2d2;
+  padding-left: 8%;
+}
+.info a{
+  font-weight: bold;
+  color:black;
+}
+h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2866B9;
+}
+.fotoUser img{
+  border-radius: 50%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin-left: 20%;
+}
+/* Información de los entrenos */
+.entrenosUsuarios{
+  margin-top: 2%;
+  margin-bottom: 8%;
+}
+.infEntreno{
+   margin-top: 4%;
+   width:100%;
+}
+.entreno{
+  background-color: rgb(235,235, 235);
+  margin-right: 5%;
+  margin-left: 1%;
+  margin-bottom: 1.5%;
+  border-radius: 10px;
+}
+
+.entreno p{
+  font-size: 18px;
+}
+.entreno a{
+  font-weight: bold;
+  color:black;
+}
+
+.infoEntreno{
+  margin-top: 1%;
+  padding: 2%;
+  width: 100%;
+  word-wrap: break-word
+}
+.infoEntreno .nombre{
+  background-color: #a9203f;
+  color:white;
+  text-align: center;
+  border-radius: 5px;
+}
+.infoEntreno .creador{
+  margin-top: 5%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.final{
+  margin-bottom: 10%
+}

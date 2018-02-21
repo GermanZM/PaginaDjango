@@ -1,0 +1,71 @@
+.contenidoPrivada{
+  margin-left: 2%;
+  margin-bottom: 17%;
+}
+.info{
+  margin-top: 25%;
+  border: 1px solid #A0A0A0;
+}
+.info td{
+  text-align: justify;
+  width:50%;
+  padding-top: 4.5%;
+  padding-bottom:4.5%;
+  background-color: #d2d2d2;
+  padding-left: 8%;
+}
+.info a{
+  font-weight: bold;
+  color:black;
+}
+h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2866B9;
+}
+
+.fotoUser img{
+  border-radius: 50%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin-left: 20%;
+}
+
+/* Información The Girls */
+.infOficial{
+   margin-top: 2%;
+}
+.oficial{
+  background-color: #C0C0C0;
+  margin-right: 4%;
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  border-radius: 10px;
+}
+.oficial:hover{
+  transform: scale(1.15);
+  cursor: pointer;
+  background-color: #a9203f;
+}
+.oficial p{
+  font-size: 18px;
+}
+.oficial a{
+  font-weight: bold;
+  color:black;
+}
+.infoOficial{
+  padding-top: 8%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.oficial{
+  margin-left: 12%;
+}

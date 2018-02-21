@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block cabecera %}
+	<link rel="stylesheet" href="{% static 'css/zonaPrivada/zonaPrivada.css' %}">
+{% endblock %}
+{% block intro %}
+	<h1 class="cabecera">Inicio</h1>
+{% endblock %}
+
+{% block contenido %}
+	<div class="container">
+		<div class="row">
+				<div class="col-md-3 contenidoPrivada">
+					<table class="info">
+						<tr>
+							<td class="fotoUser"><img src="{{ perfil.foto.url }}"></td>
+						</tr>
+						<tr>
+							<td><h4>{{ perfil.nombre }}</h4></td>
+						</tr>
+						<tr>
+							{% if perfil.bono == none %}
+								<td><h4>Sin tarifa</h4></td>
+							{% else %}
+								<td><h4>Tarifa: {{ perfil.bono.tipo }}</h4></td>
+							{% endif %}
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/privada/">Zona Privada</a></h4></td>
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/privada/reservarClase">Reservar Clases</a></h4></td>
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/privada/atletas">Atletas</a></h4></td>
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/privada/modPerfil">Modificar Perfil</a></h4></td>
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/privada/benchmarks">BenchMarks</a></h4></td>
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/privada/contacto">Contacto</a></h4></td>
+						</tr>
+						<tr>
+							<td><h4><a href="/crossfit/logout">Salir</a></h4></td>
+						</tr>
+					</table>
+				</div>
+			  <div class="col-md-8 opcionesUsuario">
+			  	<table class="opciones">
+			  		<tr>
+			  			<td><a href="/crossfit/privada/reservarClase"><img src="{% static 'fotos/reservar.png' %}" ></a></td>
+			  			<td><a href="/crossfit/privada/atletas"><img src="{% static 'fotos/atletas.png' %}"></a></td>
+			  		</tr>
+			  		<tr>
+			  			<td><a href="/crossfit/privada/modPerfil"><img src="{% static 'fotos/perfil.png' %}" ></a></td>
+			  			<td><a href="/crossfit/privada/contacto"><img src="{% static 'fotos/contacto.png' %}" ></a></td>
+			  		</tr>
+			  		<tr>
+			  			<td><a href="/crossfit/privada/benchmarks"><img src="{% static 'fotos/Benchmarks.PNG' %}" ></a></td>
+			  			<td><a href="{% url 'logout' %}"><img src="{% static 'fotos/salir.png' %}"></a></td>
+			  		</tr>
+			  	</table>
+			  </div>
+	  	</div>
+  	</div>
+{% endblock %}

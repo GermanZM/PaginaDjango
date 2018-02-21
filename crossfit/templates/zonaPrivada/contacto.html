@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+{% block cabecera %}
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/comun/menu.css' %}">
+	<link rel="stylesheet" href="{% static 'css/zonaPrivada/contacto.css' %}">
+{% endblock %}
+
+{% block intro %}
+	<h1 class="cabecera">Contacto</h1>
+{% endblock %}
+
+{% block contenido %}
+	<div class="container">
+		<div id="notificacion">
+			{% if messages %}
+				{% for message in messages %}
+					<p{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="row">
+			<div class="col-md-3 contenidoPrivada">
+				<table class="info">
+					<tr>
+						<td class="fotoUser"><img src="{{ perfil.foto.url }}"></td>
+					</tr>
+					<tr>
+						<td><h4>{{ perfil.nombre }}</h4></td>
+					</tr>
+					<tr>
+						{% if perfil.bono == none %}
+							<td><h4>Sin tarifa</h4></td>
+						{% else %}
+							<td><h4>{{ perfil.bono.tipo }}</h4></td>
+						{% endif %}
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/privada/">Zona Privada</a></h4></td>
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/privada/reservarClase">Reservar Clases</a></h4></td>
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/privada/atletas">Atletas</a></h4></td>
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/privada/modPerfil">Modificar Perfil</a></h4></td>
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/privada/benchmarks">BenchMarks</a></h4></td>
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/privada/contacto">Contacto</a></h4></td>
+					</tr>
+					<tr>
+						<td><h4><a href="/crossfit/logout">Salir</a></h4></td>
+					</tr>
+				</table>
+			</div>
+		 	<div class="col-md-8 contacto">
+				<!-- Zona Modificable -->
+					<h2>¿Desea contactar con nosotros?</h2>
+					<div class="contactar">
+						<form method="POST" class="email">
+							{% csrf_token %}
+							{{ form|crispy }}
+							<div class="btnEnviar">
+								<input type="submit" value="Enviar correo" class="btn btn-default">
+							</div>
+						</form>
+					</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d400.7743869944665!2d-6.211442990700986!3d36.52528734586307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dcddc9c6580fd%3A0xa20feb427badddaa!2sCalle+Francia%2C+40%2C+11519+El+Trocadero%2C+C%C3%A1diz!5e0!3m2!1ses!2ses!4v1515831721446" class="mapa" frameborder="0" allowfullscreen></iframe>
+		  	</div>
+	  	</div>
+	</div>
+{% endblock %}

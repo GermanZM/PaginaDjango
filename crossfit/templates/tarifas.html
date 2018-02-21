@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block cabecera %}
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/comun/menu.css' %}">
+	<link rel="stylesheet" href="{% static 'css/tarifas.css' %}">
+{% endblock %}
+
+{% block intro %}
+	<ul>
+	  <li><a href="/crossfit/index">Inicio</a></li>
+	  <li><a href="/crossfit/horario">Horario</a></li>
+	  <li><a class="active" href="/crossfit/tarifa">Tarifas</a></li>
+	  {% if user.is_authenticated  %}
+	  	<li><a href="{% url 'logout' %}">Logout</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/privada">Zona Privada</a></li>
+	  	<li class="bienvenido">Bienvenido: {{ user.username }}</li>
+	  {% else %}
+  	  	<li><a href="/crossfit/registro/">Registrarse</a></li>
+	  	<li class="zonaPrivada"><a  href="/crossfit/login">Zona Privada</a></li>
+	  {% endif %}
+	</ul>
+{% endblock %}
+
+{% block contenido %}
+	<div class="container-fluid tarifas">
+		{% if tarifas %}
+		<div class="container">
+			<div class="row">
+			{% for bono in tarifas %}
+				<div class="col-md-4">
+					<div class="tarifa">
+						<table>
+							<tr>
+								<td class="tipo"><b>{{ bono.tipo }}</b></td>
+							</tr>
+							<tr>
+								<td class="precio"><b>{{ bono.precio }} <span class="signoPrecio">€</span> </b> / mensual</td>
+							</tr>
+							{% if bono.tipo == 'ILIMITADO' %}
+								<tr>
+									<td class="creditos"><b>Clases: </b>Indefinido</td>
+								</tr>
+							{% else %}
+								<tr>
+									<td class="creditos"><b>Clases:</b> {{ bono.creditos_clase }}</td>
+								</tr>
+							{% endif %}
+						</table>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+		{% else %}
+			<div class="informativoTarifas">
+				<p>Actualmente no se encuentra ninguna tarifa definida, podéis pasaros por el Box si necesitáis más información.</p>
+				<p>Un cordial saludo</p>
+				<span class="footerInfor"><p>Legends vs Tigers</p></span>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+.modal-header{
+	border: 0;
+	background-color: #a9203f;
+	color: white;
+	padding-left: 5%;
+}
+.close{
+	padding: 1px 4px;
+}
+.cabeceraA{
+	display: flex;
+  	align-items: center;
+}
+.inf{
+	float:right;
+	margin-right: 25%;
+	font-weight: bold;
+	font-size: 20px;
+}
+.logo{
+	width:7%;
+}
+.infoReservaS{
+	font-size: 18px;
+}
+.infoReservaS .tipo{
+	margin-top: 2%;
+	float:left;
+}
+.infoReservaS .inicio{
+	margin-top: 2%;
+	float:right;
+}
+.infoAtletasR{
+	padding:1%;
+	margin-top: 2%;
+	margin-left: 5%;
+}
+.infoAtletasR p{
+	font-size: 20px;
+	padding: 1%;
+}
+.noAtletas{
+	width: 100%;
+	margin-left: 18%;
+}
+.botones{
+	text-align: center;
+}
+.btn-default{
+  background-color: #a9203f;
+  display: inline-block;
+  font: 400 14px/14px "Verdana";
+  color: #ffffff;
+  padding: 11px 19px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  -moz-border-radius:10px;
+  -webkit-border-radius:5px;
+  -o-border-radius:5px;
+}
+.btn-default:hover{
+    text-decoration: none;
+    background-color: #b8102f;
+    color:white;
+}
+.infoAtletasR img{
+	float:left;
+	min-width: 50px;
+	max-width: 50px;
+	min-height: 50px;
+	max-height: 50px;
+}
+.infoAtletasR .informacion{
+	float:right;
+}
+.informacionAT{
+	margin-top: 4%;
+}
+.carga{
+	display: none;
+}
